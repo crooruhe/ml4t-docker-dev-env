@@ -1,0 +1,12 @@
+services:
+  ml4t:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: ml4t-student
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /ml4t
